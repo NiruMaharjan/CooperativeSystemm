@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+hellloo
+<table  class="table table-bordered table-striped table-hover" id="customer-table">
+    <tr>
+        <th>Customer Id</th>
+        <th>Customer Name</th>
+        <th>Email</th>
+        <th>Address</th>
+        <th>Contact No</th>
+        <th>Account No</th>
+
+        <th>Action</th>
+    </tr>
+    <c:forEach var="customer" items="${customers}">
+        <tr>
+            <td>${customer.id}</td>
+            <td>${customer.name}</td>
+            <td>${customer.email}</td>
+            <td>${customer.address}</td>
+            <td>${customer.contact_no}</td>
+            <td>${customer.account.account_no}</td>
+
+            <td>Edit delete</td>
+
+
+        </tr>
+    </c:forEach>
+</table>
